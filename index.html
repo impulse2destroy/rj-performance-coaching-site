@@ -38,6 +38,10 @@ nav a:hover{color:var(--ink)}
 .btn.out{background:transparent;color:var(--ink)}
 .btn.out:hover{background:var(--ink);color:var(--paper)}
 .link{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.social{display:inline-block;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
+.social:hover{color:var(--accent);border-color:var(--accent)}
+.cap a.social{color:var(--mute);border-color:var(--mute)}
+.cap a.social:hover{color:var(--ink);border-color:var(--ink)}
 .hero{padding:120px 0 100px}
 .hero .cap{margin-bottom:34px}
 .hero h1{font-size:clamp(2.8rem,7.4vw,6rem);max-width:900px}
@@ -298,7 +302,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <p>Tell Rhys where you are and where you want to be. He replies within one to two business days.</p>
     <p>[email@yourdomain.com.au]</p>
     <p>[Location / Online, Australia-wide]</p>
-    <p>[Instagram · Facebook · TikTok]</p>
+    <p><a class="social" href="https://www.instagram.com/coachrhysjones/" target="_blank" rel="noopener noreferrer" aria-label="Rhys Jones Performance Coaching on Instagram (opens in a new tab)">Instagram · @coachrhysjones</a></p>
    </div>
    <form onsubmit="return send(event)">
     <label>Name<input required name="name" autocomplete="name"></label>
@@ -319,7 +323,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
  <div class="wrap">
   <div class="foot">
    <a href="#top" class="mark"><div class="rj">RJ</div><div class="brand">Rhys Jones<span>Performance Coaching</span></div></a>
-   <div class="cap">© <span id="yr"></span> &nbsp;·&nbsp; RJ Performance</div>
+   <div class="cap"><a class="social" href="https://www.instagram.com/coachrhysjones/" target="_blank" rel="noopener noreferrer" aria-label="Rhys Jones Performance Coaching on Instagram (opens in a new tab)">Instagram</a> &nbsp;·&nbsp; © <span id="yr"></span> &nbsp;·&nbsp; RJ Performance</div>
   </div>
   <p class="disc">General information only. Not medical advice. Consult a health professional before starting any exercise or nutrition program. Results vary.</p>
  </div>
