@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rhys Jones Performance Coaching | Strong is a standard you keep</title>
+<meta name="description" content="Rhys Jones Performance Coaching. Strength, fat loss and nutrition coaching built on standards, not trends.">
+<style>
+:root{
+ --paper:#f6f3ee;
+ --paper2:#ece8e1;
+ --ink:#141414;
+ --mute:#6b6862;
+ --line:#d6d1c7;
+ --accent:#8a6a3f;
+ --serif:Georgia,"Times New Roman",serif;
+ --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.cap{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.12}
+header{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+.bar{display:flex;justify-content:space-between;align-items:center;height:72px}
+.mark{display:flex;align-items:center;gap:14px}
+.rj{font-family:var(--serif);font-size:1.2rem;border:1px solid var(--ink);width:38px;height:38px;display:flex;align-items:center;justify-content:center;letter-spacing:.04em}
+.brand{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;line-height:1.5}
+.brand span{display:block;color:var(--mute)}
+nav ul{display:flex;gap:34px;list-style:none}
+nav a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--ink)}
+.mbtn{display:none;background:none;border:0;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
+.btn{display:inline-block;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;padding:18px 34px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);cursor:pointer;font-family:var(--sans);transition:.25s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.out{background:transparent;color:var(--ink)}
+.btn.out:hover{background:var(--ink);color:var(--paper)}
+.link{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.hero{padding:120px 0 100px}
+.hero .cap{margin-bottom:34px}
+.hero h1{font-size:clamp(2.8rem,7.4vw,6rem);max-width:900px}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p{max-width:520px;margin:38px 0 46px;color:var(--mute);font-size:1.08rem}
+.cta{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:96px;padding-top:26px;gap:20px}
+.meta div span{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--ink);letter-spacing:0;text-transform:none;margin-top:6px}
+section{padding:110px 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:64px}
+.head h2{font-size:clamp(2rem,4vw,3rem);max-width:640px}
+.head p{color:var(--mute);margin-top:22px;max-width:520px}
+.num{font-family:var(--serif);color:var(--accent);font-size:1rem;letter-spacing:.1em}
+.statement{background:var(--ink);color:var(--paper);text-align:center;padding:130px 0}
+.statement blockquote{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,3.4rem);line-height:1.2;max-width:820px;margin:0 auto}
+.statement blockquote em{color:#c9a56b}
+.statement .cap{color:#8f8a80;margin-top:36px}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
+.ph{aspect-ratio:4/5;background:var(--paper2);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:20px}
+.ph small{font-size:.66rem;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.about p{color:var(--mute);margin-bottom:22px}
+.about p.first{color:var(--ink);font-family:var(--serif);font-size:1.4rem;line-height:1.45}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px 1fr 1.3fr;gap:40px;padding:38px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row h3{font-size:1.6rem}
+.row p{color:var(--mute)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.tier{padding:44px 34px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper)}
+.tier:last-child{border-right:0}
+.tier.on{background:var(--paper2)}
+.tier h3{font-size:1.7rem;margin:18px 0 6px}
+.tier .price{font-family:var(--serif);font-size:1.15rem;color:var(--accent);margin-bottom:24px}
+.tier ul{list-style:none;margin-bottom:34px;flex:1}
+.tier li{padding:11px 0;border-top:1px solid var(--line);font-size:.93rem;color:var(--mute)}
+.tier .btn{text-align:center;padding:16px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.step .num{font-size:.9rem}
+.step h3{font-size:1.35rem;margin:14px 0 10px}
+.step p{color:var(--mute);font-size:.93rem}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.cover{aspect-ratio:3/4;background:var(--paper2);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:22px}
+.cover .rj{width:32px;height:32px;font-size:1rem}
+.cover h3{font-size:1.7rem}
+.cover .cap{font-size:.62rem}
+.book h4{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin-bottom:6px}
+.book p{color:var(--mute);font-size:.92rem;margin-bottom:14px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.q p{font-family:var(--serif);font-size:1.2rem;line-height:1.5;margin-bottom:18px}
+.faq{max-width:760px;margin-left:240px}
+details{border-top:1px solid var(--line);padding:24px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;font-family:var(--serif);font-size:1.25rem;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent)}
+details[open] summary::after{content:"\2013"}
+details p{color:var(--mute);margin-top:14px;max-width:600px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.contact p{color:var(--mute);margin-bottom:14px}
+form{display:grid;gap:26px}
+label{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);display:grid;gap:8px}
+input,select,textarea{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;background:transparent;border:0;border-bottom:1px solid var(--ink);padding:10px 0;color:var(--ink);border-radius:0;width:100%}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--accent)}
+#ok{display:none;color:var(--accent);font-family:var(--serif)}
+footer{border-top:1px solid var(--line);padding:56px 0 40px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:center}
+.disc{margin-top:30px;font-size:.75rem;color:var(--mute);max-width:720px}
+@media(max-width:860px){
+ .mbtn{display:block}
+ nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);flex-direction:column;gap:22px;padding:28px;border-bottom:1px solid var(--line)}
+ nav ul.open{display:flex}
+ .hero{padding:70px 0}
+ .meta,.steps{grid-template-columns:1fr 1fr}
+ .head,.about,.contact,.row{grid-template-columns:1fr;gap:20px}
+ .tiers,.books,.quotes{grid-template-columns:1fr}
+ .tier{border-right:0;border-bottom:1px solid var(--line)}
+ .faq{margin-left:0}
+ section{padding:80px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap bar">
+  <a href="#top" class="mark"><div class="rj">RJ</div><div class="brand">Rhys Jones<span>Performance Coaching</span></div></a>
+  <nav>
+   <button class="mbtn" onclick="document.getElementById('nl').classList.toggle('open')">Menu</button>
+   <ul id="nl" onclick="this.classList.remove('open')">
+    <li><a href="#about">About</a></li>
+    <li><a href="#standards">Standards</a></li>
+    <li><a href="#coaching">Coaching</a></li>
+    <li><a href="#library">Library</a></li>
+    <li><a href="#contact">Enquire</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+
+<div class="wrap hero">
+ <div class="cap">Performance Coaching &nbsp;/&nbsp; Strength · Fat Loss · Nutrition</div>
+ <h1>Strong isn't a look. It's a <em>standard</em> you keep.</h1>
+ <p>Coaching for people who want the work to count. A clear plan, honest numbers and steady weeks. Nothing rushed. Nothing borrowed.</p>
+ <div class="cta">
+  <a href="#contact" class="btn">Begin</a>
+  <a href="#coaching" class="link">View coaching</a>
+ </div>
+ <div class="meta cap">
+  <div>Method<span>Progressive, measured</span></div>
+  <div>Format<span>Online &amp; in person</span></div>
+  <div>Rhythm<span>Weekly review</span></div>
+  <div>Pace<span>Built to last</span></div>
+ </div>
+</div>
+
+<section id="about">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">01</span> &nbsp;About</div>
+   <div><h2>Earned, not announced.</h2></div>
+  </div>
+  <div class="about">
+   <div class="ph"><div class="cap">Portrait</div><small>Recommended 1600 x 2000px · 4:5 crop</small></div>
+   <div>
+    <p class="first">Rhys Jones coaches strength, fat loss and nutrition on one principle: standards outlast motivation.</p>
+    <p>Every program is built around your body, your equipment and your week. Training is progressive. Nutrition is measured. Reviews are honest.</p>
+    <p>[Add Rhys's background, qualifications and coaching history here. Keep it factual and short.]</p>
+    <a href="#contact" class="link">Work with Rhys</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="statement">
+ <div class="wrap">
+  <blockquote>Consistency isn't intensity. It's <em>showing up</em> the same way, week after week.</blockquote>
+  <div class="cap">RJ Performance</div>
+ </div>
+</div>
+
+<section id="standards">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">02</span> &nbsp;Standards</div>
+   <div><h2>Three things we hold to.</h2><p>Simple by design. Hard to keep. That's the point.</p></div>
+  </div>
+  <div class="rows">
+   <div class="row"><div class="num">I.</div><h3>Train with progression</h3><p>Every session has a purpose. Load, reps and technique move forward in measured steps, and the log proves it.</p></div>
+   <div class="row"><div class="num">II.</div><h3>Eat with intent</h3><p>Targets are set once, then adjusted on evidence. Protein first. Real food. Meals you can repeat without resentment.</p></div>
+   <div class="row"><div class="num">III.</div><h3>Review without excuses</h3><p>Weekly check-ins look at the numbers, not the mood. What worked stays. What didn't changes.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="coaching">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">03</span> &nbsp;Coaching</div>
+   <div><h2>Choose your level of support.</h2><p>Each plan is written for you. Pricing shown is a placeholder.</p></div>
+  </div>
+  <div class="tiers">
+   <div class="tier">
+    <div class="cap">Tier 01</div><h3>Foundations</h3><div class="price">$XX / month</div>
+    <ul><li>Custom training program</li><li>Calorie and protein targets</li><li>Monthly check-in</li><li>App-based tracking</li></ul>
+    <a href="#contact" class="btn out">Enquire</a>
+   </div>
+   <div class="tier on">
+    <div class="cap">Tier 02 &nbsp;·&nbsp; Most chosen</div><h3>Performance</h3><div class="price">$XXX / month</div>
+    <ul><li>Everything in Foundations</li><li>Weekly review and adjustments</li><li>Video technique feedback</li><li>Direct messaging</li><li>Habit coaching</li></ul>
+    <a href="#contact" class="btn">Enquire</a>
+   </div>
+   <div class="tier">
+    <div class="cap">Tier 03</div><h3>In Person</h3><div class="price">$XXX / session</div>
+    <ul><li>One-on-one or small group</li><li>Hands-on technique work</li><li>Programming included</li><li>[Add location]</li></ul>
+    <a href="#contact" class="btn out">Enquire</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="process">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">04</span> &nbsp;Process</div>
+   <div><h2>No rush. No guesswork.</h2></div>
+  </div>
+  <div class="steps">
+   <div class="step"><div class="num">01</div><h3>Conversation</h3><p>A free intro. Goals, history, schedule, limits.</p></div>
+   <div class="step"><div class="num">02</div><h3>Plan</h3><p>Your training and nutrition, written for your life.</p></div>
+   <div class="step"><div class="num">03</div><h3>Practice</h3><p>You train, log and eat to plan. Rhys reviews the record.</p></div>
+   <div class="step"><div class="num">04</div><h3>Refine</h3><p>Small adjustments, made on evidence, compounding over time.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="library">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">05</span> &nbsp;Library</div>
+   <div><h2>The method, on paper.</h2><p>The e-book series. Practical, unhurried, made to be used. Titles are placeholders.</p></div>
+  </div>
+  <div class="books">
+   <div class="book">
+    <div class="cover"><div class="rj">RJ</div><div><div class="cap">Recipe File / N.01</div><h3>Seared Chicken &amp; Charred Broccolini</h3></div></div>
+    <h4>Recipe File</h4><p>High-protein plates with full macros and method. Light on prep, heavy on flavour.</p><span class="cap">Coming soon</span>
+   </div>
+   <div class="book">
+    <div class="cover"><div class="rj">RJ</div><div><div class="cap">Training File / N.01</div><h3>Strength Foundations</h3></div></div>
+    <h4>Training File</h4><p>Movement basics, progressive overload and programs to begin with.</p><span class="cap">Coming soon</span>
+   </div>
+   <div class="book">
+    <div class="cover"><div class="rj">RJ</div><div><div class="cap">Nutrition File / N.01</div><h3>Fat Loss Fundamentals</h3></div></div>
+    <h4>Nutrition File</h4><p>Calories, protein and habits, explained plainly.</p><span class="cap">Coming soon</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">06</span> &nbsp;Results</div>
+   <div><h2>In their words.</h2><p>Replace with real, consented client testimonials.</p></div>
+  </div>
+  <div class="quotes">
+   <div class="q"><p>"[Testimonial placeholder.]"</p><div class="cap">Client name</div></div>
+   <div class="q"><p>"[Testimonial placeholder.]"</p><div class="cap">Client name</div></div>
+   <div class="q"><p>"[Testimonial placeholder.]"</p><div class="cap">Client name</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">07</span> &nbsp;Questions</div>
+   <div><h2>Plainly answered.</h2></div>
+  </div>
+  <div class="faq">
+   <details><summary>Do I need a gym?</summary><p>No. Programs are written for a full gym, a home setup or bodyweight only.</p></details>
+   <details><summary>I'm new to training. Is this for me?</summary><p>Yes. You begin where you are and progress at a pace you can hold.</p></details>
+   <details><summary>How does online coaching work?</summary><p>Your plan lives in a tracking app. You log, check in weekly and message Rhys for feedback.</p></details>
+   <details><summary>Can I cancel?</summary><p>[Add cancellation and refund terms here.]</p></details>
+   <details><summary>What about injuries or medical conditions?</summary><p>Coaching does not replace medical advice. Speak with your GP or physio before starting a new program.</p></details>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="head">
+   <div class="cap"><span class="num">08</span> &nbsp;Enquire</div>
+   <div><h2>Start with a conversation.</h2></div>
+  </div>
+  <div class="contact">
+   <div>
+    <p>Tell Rhys where you are and where you want to be. He replies within one to two business days.</p>
+    <p>[email@yourdomain.com.au]</p>
+    <p>[Location / Online, Australia-wide]</p>
+    <p>[Instagram · Facebook · TikTok]</p>
+   </div>
+   <form onsubmit="return send(event)">
+    <label>Name<input required name="name" autocomplete="name"></label>
+    <label>Email<input required type="email" name="email" autocomplete="email"></label>
+    <label>Main goal
+     <select name="goal"><option>Lose fat</option><option>Build strength</option><option>Improve nutrition</option><option>Sport performance</option><option>Not sure yet</option></select>
+    </label>
+    <label>About you<textarea rows="3" name="msg"></textarea></label>
+    <div><button class="btn" type="submit">Send enquiry</button></div>
+    <div id="ok">Thank you. Your enquiry is ready to send.</div>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="foot">
+   <a href="#top" class="mark"><div class="rj">RJ</div><div class="brand">Rhys Jones<span>Performance Coaching</span></div></a>
+   <div class="cap">© <span id="yr"></span> &nbsp;·&nbsp; RJ Performance</div>
+  </div>
+  <p class="disc">General information only. Not medical advice. Consult a health professional before starting any exercise or nutrition program. Results vary.</p>
+ </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+function send(e){
+ e.preventDefault();
+ var d=new FormData(e.target);
+ var b="Name: "+d.get('name')+"\nEmail: "+d.get('email')+"\nGoal: "+d.get('goal')+"\n\n"+d.get('msg');
+ window.location.href="mailto:email@yourdomain.com.au?subject="+encodeURIComponent("Coaching enquiry from "+d.get('name'))+"&body="+encodeURIComponent(b);
+ document.getElementById('ok').style.display='block';
+ return false;
+}
+</script>
+</body>
+</html>
